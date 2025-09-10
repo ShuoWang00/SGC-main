@@ -112,7 +112,7 @@ def train():
             old_layers_optimizer.zero_grad()
 
             Lcls = loss1 + loss2 + loss3 + concat_loss
-            Lpart = loss_part / (HyperParams['part'] * 2)
+            Lpart = loss_part / HyperParams['part']
             Lcr = loss_cr * 0.1
             Lkd = (kd1 + kd2) * 0.1
 
